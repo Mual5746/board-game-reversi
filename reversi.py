@@ -1,19 +1,29 @@
 # simple board game "reversi"
 print("Hello and Wellcome to board game Reversi")
 print("please choose the size of the board: (between: 4-16) ")
+board = {}
 
 
 def table_printer(size):
-    for j in range(0, size + 1):
-        for i in range(0, size + 1):
-            if(j == 0 and i == 0):
-                for index in range(size + 1):
-                    print(" ", index,  end=" ")
+    for j in range(1, size + 1):
+        for i in range(1, size + 1):
+            if(j == 1 and i == 1):
+                for index in range(1, size + 1):
+                  # for n in make_arr():
+                   # board[1][index] = index
+                    # print(board)
+                    print("   ", index,  end="")
                 print()
 
-            if(i == 0):
-                print(j, end=" ")
+            if(i == 1):
+
+                print("  ", " --- "*size)
+                #print(j, end=" ")
+
+                print(j,  "|   |"*(int(size*1.1)),  end=" ")
         print("")
+    print("  ", " --- "*size)
+    print("lets play reversi:")
 
 
 def make_arr(size):
